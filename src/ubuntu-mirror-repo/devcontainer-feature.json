@@ -1,0 +1,15 @@
+{
+    "name": "Ubuntu Mirror Repo",
+    "id": "ubuntu-mirror-repo",
+    "version": "1.0.0",
+    "description": "A feature to customerize ubuntu os mirror for upgrade or install apps.",
+    "options": {
+        "mirror": {
+            "type": "string",
+            "default": "",
+            "description": "Specify your mirror address, like: 'http://archive.ubuntu.com'"
+        }
+    },
+    "installsAfter": [
+    ]
+}
