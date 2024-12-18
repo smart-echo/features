@@ -40,11 +40,11 @@ if [ "$NAME" != "Ubuntu" ]; then
 fi
 
 if test "$VERSION_ID" \< "24.04"; then
-    echo "sed -i \"s#http://archive.ubuntu.com#${MIRROR}#g\" /etc/apt/sources.list"
-    echo "sed -i \"s#http://security.ubuntu.com#${MIRROR}#g\" /etc/api/sources.list"
+    sed -i "s#http://archive.ubuntu.com#${MIRROR}#g" /etc/apt/sources.list
+    sed -i "s#http://security.ubuntu.com#${MIRROR}#g" /etc/apt/sources.list
 else
-    echo "sed -i \"s#http://archive.ubuntu.com#${MIRROR}#g\" /etc/apt/sources.list.d/ubuntu.sources"
-    echo "sed -i \"s#http://security.ubuntu.com#${MIRROR}#g\" /etc/api/sources.list.d/ubuntu.sources"
+    sed -i "s#http://archive.ubuntu.com#${MIRROR}#g" /etc/apt/sources.list.d/ubuntu.sources
+    sed -i "s#http://security.ubuntu.com#${MIRROR}#g" /etc/apt/sources.list.d/ubuntu.sources
 fi
 EOF
 
