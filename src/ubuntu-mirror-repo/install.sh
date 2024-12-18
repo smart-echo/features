@@ -20,7 +20,7 @@ echo "The effective dev container containerUser's home directory is '$_CONTAINER
 cat > /usr/local/bin/using-mirror-repo \
 << EOF
 #!/bin/sh
-#!/bin/sh
+
 echo "The mirror is ${MIRROR}"
 
 if [ -z "$MIRROR" ]; then
@@ -49,3 +49,5 @@ fi
 EOF
 
 chmod +x /usr/local/bin/using-mirror-repo
+
+/usr/local/bin/using-mirror-repo
